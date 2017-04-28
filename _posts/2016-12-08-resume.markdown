@@ -6,6 +6,7 @@ categories: diary
 location: Florence, Italy
 description: resume, love plain texts. Enjoy its manual
 ---
+---
 
 # 程序员简历模板
 
