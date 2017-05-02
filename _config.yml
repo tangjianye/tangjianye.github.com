@@ -4,7 +4,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://tangjianye.github.io/" # the base hostname & protocol for your site
 permalink: /:title/
 avatar: /assets/img/avatar.png
-about: /assets/img/avatar.png
+about: /assets/img/about.png
 favicon: /assets/img/favicon.png
 basecss: 
 # Theme specific configuration
