@@ -1,15 +1,13 @@
 ---
 layout: post
-title: 个人简历
-date: 2016-12-08 23:31:30
-categories: diary
-location: Florence, Italy
-description: resume, love plain texts. Enjoy its manual
+title: "程序员简历模板"
+date:   2017-04-28 13:05:14 +0800
+categories: android
+author: JayaTang
+location: Changsha, China
+description: 本简历模板由国内首家互联网人才拍卖网站提供
 ---
 ---
-
-# 程序员简历模板
-
 本简历模板由国内首家互联网人才拍卖网站「 [JobDeer.com](http://www.jobdeer.com) 」提供。
 
 （括号里的是我们的顾问编写的说明，建议在简历书写完成后统一删除）
@@ -34,7 +32,7 @@ description: resume, love plain texts. Enjoy its manual
 
 （以上内容在写完简历后，对每一段进行评估，完成后再删除）
 
----
+
 
 
 # 联系方式
