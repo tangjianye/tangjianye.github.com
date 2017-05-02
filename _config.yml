@@ -1,25 +1,25 @@
 # Site configuration
-domain: "http://songroger.win"
+domain: "http://tangjianye.github.io/"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://songroger.github.io/" # the base hostname & protocol for your site
+url: "http://tangjianye.github.io/" # the base hostname & protocol for your site
 permalink: /:title/
-avatar: http://7xof48.com1.z0.glb.clouddn.com/avatar.jpg
-about: http://7xof48.com1.z0.glb.clouddn.com/about.jpg
-favicon: http://7xof48.com1.z0.glb.clouddn.com/favicon.png
+avatar: /assets/img/avatar.png
+about: /assets/img/avatar.png
+favicon: /assets/img/favicon.png
 basecss: 
 # Theme specific configuration
-title: songroger
+title: JayaTang
 description: >
-  Hi there, My name is Luozhan.Song, usually I use "songroger" as my ID everywhere.
+  Hi there, My name is TangJianYe, usually I use "Jaya" as my ID everywhere.
   I was born and raised in Hunan China. 
   I'm really fond of beautiful design, drawing etc.
 
 # Contact and social media links
-twitter_username: songrogero
-github_username: songroger
-facebook_username: song.roger.1
-instagram_username: songroger198
-linkedin_username: songroger
+#twitter_username: JayaTang
+github_username: tangjianye
+facebook_username: jianye.tang
+#instagram_username: JayaTang
+#linkedin_username: JayaTang
 
 exclude: ['node_modules', 'gulpfile.js', 'package.json']
 
