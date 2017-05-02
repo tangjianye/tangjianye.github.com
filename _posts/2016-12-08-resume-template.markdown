@@ -5,7 +5,7 @@ date:   2017-04-28 13:05:14 +0800
 categories: android
 author: JayaTang
 location: Changsha, China
-description: 本简历模板由国内首家互联网人才拍卖网站提供
+description: 本简历模板由国内首家互联网人才拍卖网站提供。
 ---
 ---
 本简历模板由国内首家互联网人才拍卖网站「 [JobDeer.com](http://www.jobdeer.com) 」提供。

@@ -5,11 +5,11 @@ date:   2016-10-12 17:13:17 +0800
 categories: diary
 author: JayaTang
 location: Changsha, China
-description: love markdown, love plain texts. Enjoy its manual
+description: love markdown, love plain texts. Enjoy its manual.
 tail: I'm a murmur theme
 ---
 ---
-Markdown manual
+Markdown manual.
 
 ### 1. 斜体和粗体
 
