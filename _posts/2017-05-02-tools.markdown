@@ -2,7 +2,7 @@
 layout: post  
 title:  "工作常用站点"  
 date:   2017-05-02 13:05:14 +0800  
-categories: android  
+categories: tools    
 author: JayaTang  
 location: Changsha, China  
 description: 工作中经常访问的网站。  

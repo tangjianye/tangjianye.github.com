@@ -12,3 +12,6 @@ How to run jekyll.
 2. jekyll build
 3. jekyll serve
 ```
+
+Categories/Tags  
+`diary android standard tools `
