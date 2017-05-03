@@ -4,4 +4,11 @@
 
 This is another simple theme for [jekyll](http://jekyllrb.com/).
 Try to edit `_config.yml` first before use it.
-Replace all the blabla configurations(like "avatar", "about", "title", etc.) to your owns.
+Replace all the blabla configurations(like "avatar", "about", "title", etc.) to your owns.  
+
+How to run jekyll.
+```
+1. cd workspace
+2. jekyll build
+3. jekyll serve
+```

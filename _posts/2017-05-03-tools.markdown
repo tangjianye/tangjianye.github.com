@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "常用站点"
+date:   2017-05-03 10:00:00 +0800
+categories: tools
+author: JayaTang
+location: Changsha, China
+description: 工作中经常访问的网站。
+---
+---
+工作中经常访问的网站。
+
+## 工具类站点
+[Hosts](https://laod.cn/hosts/2017-google-hosts.html)：修复谷歌、Twitter和Facebook等访问的hosts。  
+[TinyPng](https://tinypng.com/)：Smart PNG and JPEG compression.  
+[JsonEditor](http://www.json.org.cn/tools/JSONEditorOnline2.0/index.htm)：Json格式文件预览和编辑。  
+[Git学习](http://learngitbranching.js.org/)：Git分支在线学习。  
+[草料二维码](http://cli.im/news/vcard)：二维码生成器。  
+
+## 学习类站点
+[Github](https://github.com/)  
+
+## Android
+[AndroidDeveloper](https://developer.android.com/index.html)：Android开发。  
+[AndroidAssetStudio](http://romannurik.github.io/AndroidAssetStudio/index.html)：Android图标生成。  
+[MobDevGroup](http://mobdevgroup.com/):移动开发在线分享  
+[Fresco](https://www.fresco-cn.org/):图片处理框架  
+
+## 下载类站点:
+[Java](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)：JDK/JRE下载。

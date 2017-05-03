@@ -43,7 +43,7 @@ MAJOR.MINOR.PATCH
 - [Testin云测试](http://com.testin.cn/)
 - [蒲公英内测](https://www.pgyer.com/)
 - [微信开放平台](https://open.weixin.qq.com/)
- 
+
 ## 市场推广
 - [百度开发者平台-百度市场](http://app.baidu.com/index)
 - [360移动开发平台-360市场](http://dev.360.cn/)
@@ -54,4 +54,3 @@ MAJOR.MINOR.PATCH
 
 ## 学习站点
 - [Android Developers](https://developers.google.cn/)
-
