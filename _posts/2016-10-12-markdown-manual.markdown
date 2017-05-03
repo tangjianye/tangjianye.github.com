@@ -1,12 +1,12 @@
 ---
-layout: post
-title:  "Markdown"
-date:   2016-10-12 17:13:17 +0800
-categories: diary
-author: JayaTang
-location: Changsha, China
-description: love markdown, love plain texts. Enjoy its manual.
-tail: I'm a murmur theme
+layout: post  
+title:  "Markdown"  
+date:   2016-10-12 17:13:17 +0800  
+categories: diary  
+author: JayaTang  
+location: Changsha, China  
+description: love markdown, love plain texts. Enjoy its manual.  
+tail: I'm a murmur theme  
 ---
 ---
 Markdown manual.

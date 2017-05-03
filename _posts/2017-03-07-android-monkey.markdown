@@ -1,11 +1,11 @@
 ---
-layout: post
-title:  "Monkey测试"
-date:   2017-03-07 13:05:14 +0800
-categories: android
-author: JayaTang
-location: Changsha, China
-description: Monkey测试是Android平台自动化测试的一种手段。
+layout: post  
+title:  "Monkey测试"  
+date:   2017-03-07 13:05:14 +0800  
+categories: android  
+author: JayaTang  
+location: Changsha, China  
+description: Monkey测试是Android平台自动化测试的一种手段。  
 ---
 ---
 Monkey测试是Android平台自动化测试的一种手段，通过Monkey程序模拟用户触摸屏幕、滑动Trackball、按键等操作来对设备上的程序进行压力测试。
