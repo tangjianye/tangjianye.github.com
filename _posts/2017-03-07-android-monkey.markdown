@@ -11,7 +11,7 @@ description: Monkey测试是Android平台自动化测试的一种手段。
 Monkey测试是Android平台自动化测试的一种手段，通过Monkey程序模拟用户触摸屏幕、滑动Trackball、按键等操作来对设备上的程序进行压力测试。
 
 ## 基础语法
-基础语法如下：
+基础语法如下：  
 ```
 $ adb shell monkey [options]  
 $ adb shell monkey -p your.package.name -v number  
@@ -33,11 +33,10 @@ $ monkey -p（Package的意思）指定包名 -v（Log级别）number（次数�
 
 ---
 
-## ====运行步骤====
+## 运行步骤
 1. 使用数据线连接Android设备和电脑（根据提示安装好Android设备驱动）。
 2. 在本地..\Android\sdk\platform-tools文件夹下打开cmd命令窗。
 3. ~~在cmd命令窗输入adb命令：adb devices 查看Android设备是否连接成功。~~
 3. 在cmd命令窗输入monkey命令：adb shell monkey [options]
 4. 按下回车[Enter]等待运行。
 5. 获取本地电脑上的LOG日志。
-
