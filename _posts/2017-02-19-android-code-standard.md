@@ -21,7 +21,7 @@ description: 本文档定义了湖南奥昇信息技术有限公司Android开发
 
 ### 单独成行
 花括号不要单独一行，和它前面的代码同一行。而且，花括号与前面的代码之间用一个空格隔开。
-```Java
+```
 public void method() { // Good 
 } 
 
@@ -36,7 +36,7 @@ public void method(){ // Bad
 
 ### 空格隔开
 - if、else、for、switch、while等逻辑关键字与后面的语句留一个空格隔开。  
-```Java
+```
   // Good
   if (booleanVariable) {
       // TODO while booleanVariable is true
@@ -52,12 +52,12 @@ public void method(){ // Bad
   } 
 ```
 - 运算符两边各用一个空格隔开。  
-```Java
+```
 int result = a + b; //Good, = 和 + 两边各用一个空格隔开
 int result=a+b; //Bad,=和+两边没用空格隔开
 ```
 - 方法的每个参数之间用一个空格隔开。  
-```Java
+```
 public void method(String param1, String param2); // Good，param1后面的逗号与String之间隔了一个空格
 method(param1, param2); // Good，方法调用时，param1后面的逗号与param2之间隔了一个空格
 method(param1,param2); // Bad，没有用一个空格隔开
@@ -72,14 +72,14 @@ method(param1,param2); // Bad，没有用一个空格隔开
 
 ### 空格缩进
 当一个表达式无法容纳在一行内时，可换行显示，另起的新行用8个空格缩进。
-```Java
+```
 someMethod(longExpression1, longExpression2, longExpression3,  
         longExpression4, longExpression5);
 ```
 
 ### 一行一变量
 一行声明一个变量，不要一行声明多个变量，这样有利于写注释。
-```Java
+```
 private String param1; // 参数1
 private String param2; // 参数2
 ```
@@ -105,7 +105,7 @@ private String param2; // 参数2
 ### 包命名
 **域名反写+项目名称+模块名称**，全部单词用小写字母。  
 例如，奥昇平台项目的Config模块包名如下：
-```Java
+```
 cn.aorise.platform.config
 ```
 ### 类和接口命名
@@ -148,13 +148,13 @@ cn.aorise.platform.config
 
 ### 常量命名
 全部为大写单词，单词之间用下划线分开。
-```Java
+```
 public final static int PAGE_SIZE = 20;
 ```
 
 ### 变量命名
 **{类型描述+}{范围描述+}意义描述**，用m+大驼峰规则命名。  
-```Java
+```
 private TextView mTxtHeaderTitle; // 标题栏的标题
 private Button mBtnLogin; // 登录按钮
 ```
@@ -232,7 +232,7 @@ private Button mBtnLogin; // 登录按钮
 
 ### 文件头注释
 文件顶部统一添加版权声明，声明的格式如下：
-```Java
+```
 /**
  * Copyright (c) 2016. Author Inc. All rights reserved.
  */
@@ -240,7 +240,7 @@ private Button mBtnLogin; // 登录按钮
 
 ### 类和接口注释
 类和接口统一添加javadoc注释，格式如下：
-```Java
+```
 /**
  * 类或接口的描述信息
  *
@@ -256,7 +256,7 @@ private Button mBtnLogin; // 登录按钮
 - 抽象父类的自定义公用方法  
 - 工具类的公用方法  
 
-```Java
+```
 /**
  * 登录
  *
@@ -274,7 +274,7 @@ public void login(String loginName, String password,    ActionCallbackListener<V
 - 枚举类定义的所有枚举常量  
 - 实体类的所有属性变量  
 
-```Java
+```
 public static final int TYPE_CASH = 1; // 现金券
 public static final int TYPE_DEBIT = 2; // 抵扣券
 public static final int TYPE_DISCOUNT = 3; // 折扣券
