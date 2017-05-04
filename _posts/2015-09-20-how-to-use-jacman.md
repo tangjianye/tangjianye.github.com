@@ -1,18 +1,14 @@
 ---
 layout: post
 title: 如何使用 Jacman 主题
-tags:
-- Jekyll
-- Jacman
+tags: [Jekyll, Jacman]
 categories: Jekyll
 description: Jacman 是一款扁平化，有着响应式设计的 Jekyll 主题。本站正式使用了 Jacman 主题。Jacman 基于 Jacman 的 Hexo 主题修改而来。你可以前往本站和 Demo 预览更多关于本主题的更多效果。如果你有任何问题或意见欢迎到 GitHub 发表 issue。
 ---
-##主题介绍
 Jekyll-Jacman 是为 [Jekyll](http://jekyllrb.com) 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。Jacman 始于 [Jacman](https://github.com/wuchong/jacman) 移植而来。
 
 <!-- more -->
-##配置指南
-
+## 配置指南
 Jacman 主题提供了丰富的配置属性，可以实现您对主题的自定义。配置文件`_config.yml`位于主题根目录下。本次更新对配置文件进行了较大调整，如您之前就使用了 Jacman，也需要您根据以下指南进行相应的修改。
 
 ```
@@ -117,16 +113,16 @@ tinysou_search:     ## http://tinysou.com/
   id: "4ac092ad8d749fdc6293" 
 ```
 
-###属性功能
+### 属性功能
 - **菜单 menu**
-默认没有启用 `/tags` 和 `/categories`页面，如果需要启用请在博客目录下分别建立`tags` 和 `categories`文件夹每个文件夹中分别包含一个`index.md`文件。内容为：
+默认没有启用 `/tags` 和 `/categories`页面，如果需要启用请在博客目录下分别建立`tags` 和 `categories`文件夹每个文件夹中分别包含一个`index.md`文件。内容为：  
 
 ```
+---
 layout: tags (或categories)
 title: tags (或categories)
 ---
 ```
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为主题中已经内置了这两个页面的模板，所以他们会被正确的解析出来。
 
@@ -185,6 +181,7 @@ title: tags (或categories)
 
  `google_cse`：如果开启谷歌自定义搜索需要先登录 [Google CSE](https://www.google.com/cse/)，配置好你的站点，并获得此自定义搜索的ID。此外你需要在博客目录下建立`search`文件夹并包含一个`index.md`文件。内容为：
  ```
+ ---
  layout: search
  title: search
  ---
@@ -193,21 +190,24 @@ title: tags (或categories)
  `tiny_search`: 如果要开启[微搜索](http://tinysou.com/)，需要先注册一个帐号，配置一个Engine，将Engine的Key填入配置文件中的`id`即可。
 
 
-##常见问题
+## 常见问题
 - **Q：图片默认都是居左的，我怎么设置能让图片居中呢？**
->使用 `<img src="" style="display:block;margin:auto"/>`的HTML标签。
+
+    > 使用 `<img src="" style="display:block;margin:auto"/>`的HTML标签。
 
 - **Q：如何建立一篇图片类文章（Gallery Post）？**
-> 直接新建一个 Markdown 文件，将其`front-matter`修改为如下，即可看到主题为图片类文章提供的样式。
-```
----
-layout: photo
-title: Gallery Post
-photos:
-- http://i.minus.com/ibobbTlfxZgITW.jpg
-- http://i.minus.com/iedpg90Y0exFS.jpg
----
-```
+
+    > 直接新建一个 Markdown 文件，将其`front-matter`修改为如下，即可看到主题为图片类文章提供的样式。
+    >
+    > ```
+  ---
+  layout: photo
+  title: Gallery Post
+  photos:
+  - http://i.minus.com/ibobbTlfxZgITW.jpg
+  - http://i.minus.com/iedpg90Y0exFS.jpg
+  ---
+    > ```
 
 - **Q：我在配置文件中给某一项设置了值，但为什么总是看不到效果啊？**
 >`_config.yml`文件中的每个属性值前面必须留一个空格，建议在 Sublime/Notepad++ 中开启显示所有空格模式。另每篇文章的 `front-matter` 也要注意这个问题。
