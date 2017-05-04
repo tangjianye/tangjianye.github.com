@@ -1,11 +1,10 @@
 ---
 layout: post  
 title:  Android代码规范   
-date:   2017-02-19 14:00:00 +0800  
+date:   2017-02-19
 tags: [Android, Standard]  
 categories: Standard  
 author: JayaTang  
-location: Changsha, China  
 description: 本文档定义了湖南奥昇信息技术有限公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向。    
 ---
 本文档定义了湖南奥昇信息技术有限公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向。  

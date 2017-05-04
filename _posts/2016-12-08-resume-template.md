@@ -1,11 +1,10 @@
 ---
 layout: post  
 title: 程序员简历模板  
-date:   2016-12-08 14:00:00 +0800 
+date:   2016-12-08
 tags: [Resume]
 categories: Resume  
 author: JayaTang  
-location: Changsha, China  
 description: 本简历模板由国内首家互联网人才拍卖网站提供。  
 ---
 本简历模板由国内首家互联网人才拍卖网站「 [JobDeer.com](http://www.jobdeer.com) 」提供。

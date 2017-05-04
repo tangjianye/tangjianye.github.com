@@ -1,11 +1,10 @@
 ---
 layout: post  
 title:  移动应用环境搭建  
-date:   2017-04-28 14:05:05 +0800  
+date:   2017-04-28 
 tags: [APP, Standard]  
 categories: Standard  
 author: JayaTang  
-location: Changsha, China  
 description: 移动应用环境搭建，包括代码管理、项目管理、测试工具、发布渠道和统计等方面。  
 ---
 移动应用环境搭建，包括代码管理、项目管理、测试工具、发布渠道和统计等方面。
