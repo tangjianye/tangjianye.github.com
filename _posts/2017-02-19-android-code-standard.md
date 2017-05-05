@@ -18,7 +18,7 @@ description: 本文档定义了湖南奥昇信息技术有限公司Android开发
 缩进统一为4个空格，将Tab size设置为4则可以保证tab键按4个空格缩进。保证切换到不同tab长度的环境时还能继续保持统一的4个空格的缩进样式。
 
 ### 单独成行
-花括号不要单独一行，和它前面的代码同一行。而且，花括号与前面的代码之间用一个空格隔开。
+花括号不要单独一行，和它前面的代码同一行。而且，花括号与前面的代码之间用一个空格隔开。  
 ```Java
 public void method() { // Good 
 } 
@@ -34,7 +34,7 @@ public void method(){ // Bad
 
 ### 空格隔开
 
-- if、else、for、switch、while等逻辑关键字与后面的语句留一个空格隔开。    
+- if、else、for、switch、while等逻辑关键字与后面的语句留一个空格隔开。  
 ```Java
   // Good
   if (booleanVariable) {
@@ -95,6 +95,7 @@ private String param2; // 参数2
 理论上一个方法最多不要超过40行代码。  
 
 ### 资源规范
+
 - 文字大小的单位统一用sp，元素大小的单位统一用dp。。
 - 应用中的字符串统一在strings.xml中定义，然后在代码和布局文件中引用。
 - 颜色值统一在colors.xml中定义，然后在代码和布局文件中引用。另外，不要在代码和布局文件中引用系统的颜色，除了透明色。
@@ -283,7 +284,8 @@ private String name; // 券名称
 private String introduce; // 券简介
 ```
 
-## 附录
+## 附录  
+
 - 英文缩写  
 
 |    名称    |                                        缩写                                         |
