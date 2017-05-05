@@ -7,8 +7,7 @@ categories: Standard
 author: JayaTang  
 description: 本文档定义了湖南奥昇信息技术有限公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向。    
 ---
-本文档定义了湖南奥昇信息技术有限公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向。  
-本文档的预期读者包括：湖南奥昇信息技术有限公司Android系统设计人员、开发人员及测试人员。
+本文档定义了湖南奥昇信息技术有限公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向。本文档的预期读者包括：湖南奥昇信息技术有限公司Android系统设计人员、开发人员及测试人员。
 
 ## 书写规范
 
@@ -34,7 +33,8 @@ public void method(){ // Bad
 ```
 
 ### 空格隔开
-- if、else、for、switch、while等逻辑关键字与后面的语句留一个空格隔开。  
+
+- if、else、for、switch、while等逻辑关键字与后面的语句留一个空格隔开。    
 ```Java
   // Good
   if (booleanVariable) {
@@ -92,7 +92,7 @@ private String param2; // 参数2
 - Mac：OPTION+COMMAND+L  
   
 ### 函数方法
-理论上一个方法最多不要超过40行代码。
+理论上一个方法最多不要超过40行代码。  
 
 ### 资源规范
 - 文字大小的单位统一用sp，元素大小的单位统一用dp。。
@@ -211,7 +211,7 @@ private Button mBtnLogin; // 登录按钮
 - 背景类，添加bg前缀  
 - 分隔类，添加div前缀  
 - 默认类，添加def前缀  
-- 多种状态的，添加selector前缀（一般为ListView的selector或按钮的selector）  
+- ~~多种状态的，添加selector前缀（一般为ListView的selector或按钮的selector）~~  
 - 区分状态时，默认状态，添加normal后缀  
 - 区分状态时，按下时的状态，添加pressed后缀  
 - 区分状态时，选中时的状态，添加selected后缀  
