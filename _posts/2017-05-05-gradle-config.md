@@ -15,21 +15,8 @@ Android Studio通过本地Gradle文件配置灵活控制依赖包的版本。这
 - 在AS工程文件的根目录创建'config/config.gradle'文件：  
 ![config.gradle](/assets/img/gradle-config-01.png)
 
-- 配置好的config.gradle文件内容如下:
-```Gradle
-ext {
-    android = [
-            compileSdkVersion: 25,
-            buildToolsVersion: "25.0.2",
-            minSdkVersion    : 15,
-            targetSdkVersion : 25
-    ]
-
-    dependencies = [
-            'aorise-common': 'cn.aorise:common:1.0.3'
-    ]
-}
-```
+- 配置好的config.gradle文件内容如下:  
+{% gist a936c94f3181d4aea566787ea500a838 %}
 
 - 在AS工程文件根目录build.gradle文件添加如下配置： 
 ![build.gradle](/assets/img/gradle-config-02.png)
