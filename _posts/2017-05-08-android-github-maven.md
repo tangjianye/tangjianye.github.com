@@ -19,7 +19,7 @@ description: 利用Github托管功能创建代码maven仓库。
 2. 克隆空仓库到本地：'D:\Github\AoriseMaven'.
 
 ## 源码工程
-1. 在需要打包托管到maven仓库的module工程的'build.gradle'文件添加如下配置：  
+1. 在需要打包托管到maven仓库的**module工程**的'build.gradle'文件添加如下配置：  
  
   ```Gradle
   apply plugin: 'com.android.library'
@@ -35,12 +35,12 @@ description: 利用Github托管功能创建代码maven仓库。
   apply plugin: 'maven'
   apply from: '../config/maven-common.gradle'
   ```
-2. 在AS工程文件的根目录'gradle.properties'文件添加编译生成的pom文件的output路径：  
+2. 在工程**根目录**的'gradle.properties'文件添加编译生成的pom文件的output路径：  
   
   ```Gradle
   aar.deployPathCommon=D\:\\GitHub\\AoriseMaven
   ```
-3. 在AS工程文件的根目录创建'config/maven-common.gradle'文件：  
+3. 在工程**根目录**创建'config/maven-common.gradle'文件：  
 
   ```Gradle
   ext {
@@ -61,14 +61,14 @@ description: 利用Github托管功能创建代码maven仓库。
       }
   }
   ```
-4. 在需要打包托管到maven仓库的module工程根目录执行gradle命令：  
+4. 在需要打包托管到maven仓库的**module工程**根目录执行gradle命令：  
 
   ```Gradle
   gradle uploadArchives
   ```
 
 ## 上传POM文件
-1. 命令成功后会在配置的output路径(D:\Github\AoriseMaven)生成POM文件，文件结构如下：
+1. Gradle命令成功后会在配置的output路径(D:\Github\AoriseMaven)生成POM文件，文件结构如下：
 ![POM文件包结构](/assets/img/android-github-maven-01.png)
 ![POM文件结构](/assets/img/android-github-maven-02.png)
 2. Push文件到Github远程仓库。
