@@ -2,7 +2,7 @@
 layout: post  
 title:  移动应用环境搭建  
 date:   2017-04-28 
-tags: [APP, Standard]  
+tags: [App, Standard]  
 categories: Standard  
 author: JayaTang  
 description: 移动应用环境搭建，包括代码管理、项目管理、测试工具、发布渠道和统计等方面。  
