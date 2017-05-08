@@ -1,8 +1,8 @@
 ---
 layout: post  
-title:  APP开发流程规范  
+title:  App开发流程规范  
 date:   2017-03-08 
-tags: [APP, Standard]  
+tags: [App, Standard]  
 categories: Standard  
 author: JayaTang  
 description: APP开发流程规范，包括UI/UE、测试、开发和文档等开发流程规范。  
