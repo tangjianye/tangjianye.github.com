@@ -30,10 +30,12 @@ description: Android项目集成SonarQube。
 
 ## Sonar的安装
 只需要到 Sonar 网站下载最近的发行包即可，本文写作时最新的版本为6.3.1，下载 zip 包后，直接解压到任意目录，由于 Sonar 自带了 Jetty 6 的应用服务器环境，所以不需要额外的安装就可以使用，值得一提的是 Sonar 也支持部署在 Apache Tomcat 应用服务器中。  
-- 在 windows 环境中，直接启动 Soanr 的 bin 目录下 windows-x86-64\StartSonar.bat 即可。
+- 在 windows 环境中，直接启动 Soanr 的 bin 目录下 windows-x86-64\StartSonar.bat 即可。运行成功显示：  
+![运行成功](/assets/img/tools-sanor/01.png)
 - 在 linux 环境中：NA  
 
-然后在浏览器中访问：http://localhost:9000/ 即可  
+然后在浏览器中访问: http://localhost:9000/ 即可显示SonarQube页面  
+![SonarQube](/assets/img/tools-sanor/02.png)
 
 1. 打开conf文件夹下的sonar.properties文件，设置登录账号密码：
 ```
@@ -59,7 +61,7 @@ sonar.sourceEncoding=UTF-8
 sonar.profile=Android Lint
 ```
 2. cmd进入项目所在的根目录，输入命令：sonar-runner，如果成功如下图：  
-![sonar-runner成功](http://upload-images.jianshu.io/upload_images/1653520-5658fa600d3f9204.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+![sonar-runner成功](/assets/img/tools-sanor/03.png)  
 3. 浏览器访问: http://localhost:9000 点击项目，就可以查看具体问题了。  
 
 本篇文章简单介绍了自己在本机搭建SonarQube环境时的步骤，不是完整的安装文档。搭建SonarQube环境时主要参考了两篇文章[《SonarQube的Android环境配置》](http://www.jianshu.com/p/826c80805bb2?nomobile=yes)和[《Android 代码检查工具SonarQube》](http://blog.csdn.net/z69183787/article/details/51502870)，不过遗憾的是如果只是按照两篇文章单独介绍的部分搭建环境都有问题，只有把两个文章里面介绍的内容进行整合才成功。

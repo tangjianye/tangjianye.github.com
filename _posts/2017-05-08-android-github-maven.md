@@ -69,8 +69,8 @@ description: 利用Github托管功能创建代码maven仓库。
 
 ## 上传POM文件
 1. Gradle命令成功后会在配置的output路径(D:\Github\AoriseMaven)生成POM文件，文件结构如下：
-![POM文件包结构](/assets/img/android-github-maven-01.png)
-![POM文件结构](/assets/img/android-github-maven-02.png)
+![POM文件包结构](/assets/img/android-github-maven/01.png)
+![POM文件结构](/assets/img/android-github-maven/02.png)
 2. Push文件到Github远程仓库。
 3. Github的maven远程仓库的地址如下：
 > https://raw.githubusercontent.com/github的username/仓库名/master
