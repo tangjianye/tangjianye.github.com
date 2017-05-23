@@ -22,7 +22,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 - 下载jdk,然后解压  
 > [root@centos-7 java]# wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz"  
-> [root@centos-7 java]# tar -zxvf jdk-7u79-linux-x64.tar.gz   
+> [root@centos-7 java]# tar -zxvf jdk-8u121-linux-x64.tar.gz     
 
 - 设置环境变量  
   > [root@centos-7 java]# vi /etc/profile   
