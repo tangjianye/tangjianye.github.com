@@ -5,7 +5,7 @@ date:   2017-05-09
 tags: [Tools]  
 categories: Tools  
 author: JayaTang  
-description: Android项目集成SonarQube。  
+description: Android项目集成SonarQube
 ---
 代码检查工具能帮我们检查代码中隐藏的一些bug，[Sonar](https://www.sonarqube.org/)是其中一个不错的检查工具。  
 

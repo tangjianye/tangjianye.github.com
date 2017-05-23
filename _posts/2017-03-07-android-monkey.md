@@ -5,7 +5,7 @@ date:   2017-03-07
 tags: [Android, Test]  
 categories: Android  
 author: JayaTang  
-description: Monkey测试是Android平台自动化测试的一种手段。  
+description: Monkey测试是Android平台自动化测试的一种手段  
 ---
 Monkey测试是Android平台自动化测试的一种手段，通过Monkey程序可以模拟用户触摸屏幕、滑动Trackball、按键等操作来对设备上的程序进行压力测试。
 

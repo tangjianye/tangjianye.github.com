@@ -5,7 +5,7 @@ date:   2017-05-02
 tags: [Android]  
 categories: Android  
 author: JayaTang  
-description: 利用Gradle进行Android版本和第三方依赖包的版本统一管理。
+description: 利用Gradle进行Android版本和第三方依赖包的版本统一管理
 ---
 对于一个团队开发不同的产品，Android版本和第三方依赖包的版本统一是一个问题，如果只是依靠代码review或者手动干预显然不是最科学的方式，如果可以做到利用Gradle进行Android版本和第三方依赖包的版本统一管理显然更科学。
 

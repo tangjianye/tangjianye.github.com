@@ -5,7 +5,7 @@ date:   2017-05-08
 tags: [Android]  
 categories: Android  
 author: JayaTang  
-description: 利用Github托管功能创建代码maven仓库。
+description: 利用Github托管功能创建代码maven仓库
 ---
 利用Github托管功能创建代码maven仓库。
 

@@ -5,7 +5,7 @@ date:   2017-02-19
 tags: [Android, Standard]  
 categories: Standard  
 author: JayaTang  
-description: 本文档定义了公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向。    
+description: 本文档定义了公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向   
 ---
 本文档定义了公司Android开发规范，包括代码规范、资源规范、命名规范和注释规范等方向。本文档的预期读者包括：公司Android系统设计人员、开发人员及测试人员。
 

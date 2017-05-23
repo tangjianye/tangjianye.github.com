@@ -15,7 +15,8 @@ description: Android开发环境搭建。
 ![JDK](/assets/img/android-monkey/01.png)
 - [Android Studio](https://developer.android.com/studio/index.html)：建议下载Android Studio2.3.1（自带SDK）版本。安装完成后设置Android环境变量（非必须）。    
 ![Android Studio](/assets/img/android-environment/01.png)  
-- [Hosts](https://laod.cn/hosts/2017-google-hosts.html)：修复谷歌、Twitter和Facebook等访问的hosts。如果下载SDK或者Gradle失败，可以尝试替换系统hosts文件。   
+- [Hosts](https://laod.cn/hosts/2017-google-hosts.html)：修复谷歌、Twitter和Facebook等访问的hosts。如果下载SDK或者Gradle失败，可以尝试替换系统hosts文件。
+- [Gradle](https://services.gradle.org/distributions/): 如果AS下载gradle失败，手动下载gradle，配置环境变量（非必须）。 
 
 按照步骤安装完成后，最基本的Android开发环境已经搭建成功，可以打开AS运行 Hello world!
 

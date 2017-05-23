@@ -7,7 +7,7 @@ categories: Android
 author: JayaTang  
 description: Android应用商店上架指南。  
 ---
-本文主要介绍如何发布Android应用到国内各大应用市场，以及需要准备哪些材料和注意哪些事项。
+本文主要介绍如何发布Android应用到国内各大应用市场，以及需要准备哪些材料和注意哪些事项
 
 
 ## 应用市场介绍
