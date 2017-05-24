@@ -223,7 +223,32 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 ## Jenkins配置
 
-NA
+- 系统配置  
+
+![系统配置](/assets/img/android-centos-jenkins/sys-config-01.png)      
+
+![系统配置](/assets/img/android-centos-jenkins/sys-config-02.png)    
+
+![系统配置](/assets/img/android-centos-jenkins/sys-config-03.png)    
+
+![系统配置](/assets/img/android-centos-jenkins/sys-config-04.png)    
+
+![系统配置](/assets/img/android-centos-jenkins/sys-config-05.png)    
+
+- Job配置
+
+![Job配置](/assets/img/android-centos-jenkins/job-config-01.png)  
+
+![Job配置](/assets/img/android-centos-jenkins/job-config-02.png)    
+
+![Job配置](/assets/img/android-centos-jenkins/job-config-03.png)    
+
+![Job配置](/assets/img/android-centos-jenkins/job-config-04.png)     
+
+![Job配置](/assets/img/android-centos-jenkins/job-config-05.png)    
+
+![Job配置](/assets/img/android-centos-jenkins/job-config-06.png)  
+
 
 ## 实际环境变量
 
