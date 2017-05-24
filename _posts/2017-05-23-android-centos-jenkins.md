@@ -159,7 +159,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 > [root@centos-7 ~]# mkdir /usr/local/tomcat/apache-tomcat-7.0.78/webapps   
 
 - 下载jenkins.war    
-> [root@centos-7 gradle]# wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo   
+> [root@centos-7 gradle]# wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war     
 
 - 设置环境变量    
   > [root@centos-7 gradle]# vi /etc/profile   
