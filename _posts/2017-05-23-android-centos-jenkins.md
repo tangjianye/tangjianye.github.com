@@ -17,12 +17,12 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 - 检查是否安装了openJava,如果安装了需要卸载  
 
 - 在/usr/目录下创建java目录  
-> [root@centos-7 ~]# mkdir /usr/java   
-> [root@centos-7 ~]# cd /usr/java    
+  > [root@centos-7 ~]# mkdir /usr/java   
+  > [root@centos-7 ~]# cd /usr/java    
 
 - 下载jdk,然后解压  
-> [root@centos-7 java]# wget http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz    
-> [root@centos-7 java]# tar -zxvf jdk-8u131-linux-x64.tar.gz       
+  > [root@centos-7 java]# wget http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz    
+  > [root@centos-7 java]# tar -zxvf jdk-8u131-linux-x64.tar.gz       
 
 - 设置环境变量  
   > [root@centos-7 java]# vi /etc/profile   
@@ -40,24 +40,24 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   > [root@centos-7 java]# vi /etc/profile  
 
 - 查看JDK安装是否成功    
-> [root@centos-7 java]# java -version   
-> java version "1.8.0_121"   
-> Java(TM) SE Runtime Environment (build 1.8.0_121)   
-> Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)   
+  > [root@centos-7 java]# java -version   
+  > java version "1.8.0_121"   
+  > Java(TM) SE Runtime Environment (build 1.8.0_121)   
+  > Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)   
 
 ## Android SDK环境  
 
 采用手动解压[tools](https://developer.android.com/studio/index.html)的压缩包，然后设置环境变量的方法。  
 
 - 在/usr/local目录下创建android-sdk-linux目录    
-> [root@centos-7 ~]# mkdir /usr/local/android-sdk-linux   
-> [root@centos-7 ~]# cd /usr/local/android-sdk-linux   
+  > [root@centos-7 ~]# mkdir /usr/local/android-sdk-linux   
+  > [root@centos-7 ~]# cd /usr/local/android-sdk-linux   
 
 - 下载tools解压，然后下载对应的SDK版本    
-> [root@centos-7 android-sdk-linux]# wget https://dl.google.com/android/repository/tools_r25.2.3-linux.zip    
-> [root@centos-7 android-sdk-linux]# unzip tools_r25.2.3-linux.zip       
-> [root@centos-7 android-sdk-linux]# cd tools    
-> [root@centos-7 android-sdk-linux]# android update sdk --no-ui --all --filter platform,android-25,platform-tools,build-tools-25.0.2,extra-android-m2repository
+  > [root@centos-7 android-sdk-linux]# wget https://dl.google.com/android/repository/tools_r25.2.3-linux.zip    
+  > [root@centos-7 android-sdk-linux]# unzip tools_r25.2.3-linux.zip       
+  > [root@centos-7 android-sdk-linux]# cd tools    
+  > [root@centos-7 android-sdk-linux]# android update sdk --no-ui --all --filter platform,android-25,platform-tools,build-tools-25.0.2,extra-android-m2repository
 
 - 设置环境变量    
   > [root@centos-7 android-sdk-linux]# vi /etc/profile   
@@ -73,19 +73,19 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   > [root@centos-7 android-sdk-linux]# vi /etc/profile    
 
 - 查看SDK安装是否成功  
-> [root@centos-7 android-sdk-linux]# adb   
+  > [root@centos-7 android-sdk-linux]# adb   
 
 ## Gradle环境  
 
 采用手动解压[Gradle](https://services.gradle.org/distributions)的压缩包，然后设置环境变量的方法。  
 
 - 在/usr/local目录下创建gradle目录  
-> [root@centos-7 ~]# mkdir /usr/local/gradle   
-> [root@centos-7 ~]# cd /usr/local/gradle   
+  > [root@centos-7 ~]# mkdir /usr/local/gradle   
+  > [root@centos-7 ~]# cd /usr/local/gradle   
 
 - 下载gradle3.3解压  
-> [root@centos-7 gradle]# wget https://services.gradle.org/distributions/gradle-3.3-all.zip    
-> [root@centos-7 gradle]# unzip gradle-3.3-all.zip    
+  > [root@centos-7 gradle]# wget https://services.gradle.org/distributions/gradle-3.3-all.zip    
+  > [root@centos-7 gradle]# unzip gradle-3.3-all.zip    
 
 - 设置环境变量  
   > [root@centos-7 gradle]# vi /etc/profile   
@@ -101,8 +101,8 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   > [root@centos-7 gradle]# vi /etc/profile    
 
 - 查看Gradle安装是否成功    
-> [root@centos-7 gradle]# gradle -v     
-> [root@centos-7 gradle]# Gradle 3.3  
+  > [root@centos-7 gradle]# gradle -v     
+  > [root@centos-7 gradle]# Gradle 3.3  
 
 
 
@@ -114,12 +114,12 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 采用手动解压[Tomcat](http://tomcat.apache.org/download-70.cgi)的压缩包，然后设置环境变量的方法。  
 
 - 在/usr/local目录下创建tomcat目录    
-> [root@centos-7 ~]# mkdir /usr/local/tomcat   
-> [root@centos-7 ~]# cd /usr/local/tomcat   
+  > [root@centos-7 ~]# mkdir /usr/local/tomcat   
+  > [root@centos-7 ~]# cd /usr/local/tomcat   
 
 - 下载tools解压，然后下载对应的SDK版本   
-> [root@centos-7 tomcat]# wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.78.tar.gz   
-> [root@centos-7 tomcat]# tar -zxvf  apache-tomcat-9.0.0.M17.tar.gz    
+  > [root@centos-7 tomcat]# wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.78.tar.gz   
+  > [root@centos-7 tomcat]# tar -zxvf  apache-tomcat-9.0.0.M17.tar.gz    
 
 - 设置环境变量    
   > [root@centos-7 tomcat]# vi /etc/profile   
@@ -134,14 +134,14 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   > [root@centos-7 tomcat]# vi /etc/profile    
 
 - 启动Tomcat  
-> [root@centos-7 tomcat]# cd /usr/local/tomcat/apache-tomcat-7.0.78/bin   
-> [root@centos-7 bin]# ./startup.sh  
-> Using CATALINA_BASE:   /usr/local/tomcat/apache-tomcat-7.0.78  
-> Using CATALINA_HOME:   /usr/local/tomcat/apache-tomcat-7.0.78  
-> Using CATALINA_TMPDIR: /usr/local/tomcat/apache-tomcat-7.0.78/temp  
-> Using JRE_HOME:        /usr/java/jdk1.8.0_121  
-> Using CLASSPATH:       /usr/local/tomcat/apache-tomcat-7.0.78/bin/bootstrap.jar:/opt/apache-tomcat-8.0.23/bin/tomcat-juli.jar  
-> Tomcat started.  
+  > [root@centos-7 tomcat]# cd /usr/local/tomcat/apache-tomcat-7.0.78/bin   
+  > [root@centos-7 bin]# ./startup.sh  
+  > Using CATALINA_BASE:   /usr/local/tomcat/apache-tomcat-7.0.78  
+  > Using CATALINA_HOME:   /usr/local/tomcat/apache-tomcat-7.0.78  
+  > Using CATALINA_TMPDIR: /usr/local/tomcat/apache-tomcat-7.0.78/temp  
+  > Using JRE_HOME:        /usr/java/jdk1.8.0_121  
+  > Using CLASSPATH:       /usr/local/tomcat/apache-tomcat-7.0.78/bin/bootstrap.jar:/opt/apache-tomcat-8.0.23/bin/tomcat-juli.jar  
+  > Tomcat started.  
 
 - 登录Tomcat  
 
@@ -156,10 +156,10 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 采用手动下载[Jenkins](https://jenkins.io/download/)的压缩包。
 
 - 打开tocat/webapps目录    
-> [root@centos-7 ~]# mkdir /usr/local/tomcat/apache-tomcat-7.0.78/webapps   
+  > [root@centos-7 ~]# mkdir /usr/local/tomcat/apache-tomcat-7.0.78/webapps   
 
 - 下载jenkins.war    
-> [root@centos-7 gradle]# wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war     
+  > [root@centos-7 gradle]# wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war     
 
 - 设置环境变量    
   > [root@centos-7 gradle]# vi /etc/profile   
@@ -183,7 +183,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 
 - 登录Jenkins   
-打开浏览器查看http://localhost:8080/jenkins 就可以登录。  
+  打开浏览器查看http://localhost:8080/jenkins 就可以登录。  
 
 
 ## Curl环境
@@ -191,16 +191,16 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 采用手动解压[curl](https://curl.haxx.se/download.html)的压缩包，然后设置环境变量的方法。安装curl是方便app编译完成后发布到蒲公英/fir.im等第三方APP托管平台。  
 
 - 在/usr/local目录下创建curl目录   
-> [root@centos-7 ~]# mkdir /usr/local/curl    
-> [root@centos-7 ~]# cd /usr/local/curl    
+  > [root@centos-7 ~]# mkdir /usr/local/curl    
+  > [root@centos-7 ~]# cd /usr/local/curl    
 
 - 下载curl解压  
-> [root@centos-7 curl]# wget http://curl.haxx.se/download/curl-7.20.0.tar.gz     
-> [root@centos-7 curl]# tar -zxvf curl-7.20.0.tar.gz   
-> [root@centos-7 curl]# cd curl-7.17.1     
-> [root@centos-7 curl]# ./configure --prefix=/usr/local/curl   
-> [root@centos-7 curl]# make    
-> [root@centos-7 curl]# make install  
+  > [root@centos-7 curl]# wget http://curl.haxx.se/download/curl-7.20.0.tar.gz     
+  > [root@centos-7 curl]# tar -zxvf curl-7.20.0.tar.gz   
+  > [root@centos-7 curl]# cd curl-7.17.1     
+  > [root@centos-7 curl]# ./configure --prefix=/usr/local/curl   
+  > [root@centos-7 curl]# make    
+  > [root@centos-7 curl]# make install  
 
 
 - 设置环境变量  
@@ -219,7 +219,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 > [root@centos-7 gradle]# curl --help      
  
 
-  安装curl失败可能是还需要安装gcc: `yum install gcc` 。
+- 安装curl失败可能是还需要安装gcc: `yum install gcc` 。
 
 ## Jenkins配置
 
