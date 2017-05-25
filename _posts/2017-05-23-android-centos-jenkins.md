@@ -276,7 +276,12 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   export TOMCAT_HOME=/usr/local/apache-tomcat-7.0.78
 
   # set curl
-  export PATH=$PATH:/usr/local/curl/bin
+  export PATH=$PATH:/usr/local/curl/bin  
+  
+  # set sonar
+  export SONAR_HOME=/usr/local/sonarqube-5.6.6
+  export SONAR_RUNNER_HOME=/usr/local/sonar-runner-2.4
+  export PATH=$SONAR_RUNNER_HOME/bin:$PATH 
   ~~~
   
 - 蒲公英上传 `jenkins-build.sh`  
@@ -305,4 +310,4 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 - Jenkins邮箱配置后邮件发送失败？  
   > - 邮箱的配置一直用同一个账号  
   > - 邮箱开通smtp协议   
-  > - 用LTS版本的Jenkins
+  > - 用LTS版本的Jenkins  
