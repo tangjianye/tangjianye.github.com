@@ -12,7 +12,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 ## Java环境  
 
-采用手动解压JDK的压缩包，然后设置环境变量的方法。  
+采用手动解压[JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)的压缩包，然后设置环境变量的方法。  
 
 - 检查是否安装了openJava,如果安装了需要卸载  
 
@@ -21,8 +21,8 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 > [root@centos-7 ~]# cd /usr/java    
 
 - 下载jdk,然后解压  
-> [root@centos-7 java]# wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz"  
-> [root@centos-7 java]# tar -zxvf jdk-8u121-linux-x64.tar.gz     
+> [root@centos-7 java]# wget http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz    
+> [root@centos-7 java]# tar -zxvf jdk-8u131-linux-x64.tar.gz       
 
 - 设置环境变量  
   > [root@centos-7 java]# vi /etc/profile   
@@ -47,7 +47,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 ## Android SDK环境  
 
-采用手动解压tools的压缩包，然后设置环境变量的方法。  
+采用手动解压[tools](https://developer.android.com/studio/index.html)的压缩包，然后设置环境变量的方法。  
 
 - 在/usr/local目录下创建android-sdk-linux目录    
 > [root@centos-7 ~]# mkdir /usr/local/android-sdk-linux   
@@ -188,7 +188,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 ## Curl环境
 
-采用手动解压的压缩包，然后设置环境变量的方法。安装curl是方便app编译完成后发布到蒲公英/fir.im等第三方APP托管平台。  
+采用手动解压[curl](https://curl.haxx.se/download.html)的压缩包，然后设置环境变量的方法。安装curl是方便app编译完成后发布到蒲公英/fir.im等第三方APP托管平台。  
 
 - 在/usr/local目录下创建curl目录   
 > [root@centos-7 ~]# mkdir /usr/local/curl    
@@ -250,30 +250,59 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 ![Job配置](/assets/img/android-centos-jenkins/job-config-06.png)  
 
 
-## 实际环境变量
+## 附录
 
-实际搭建环境过程中的环境变量值（和文档上面的描述有一点点偏差），文档上面的描述是我认为更加合理的模式    
-~~~sh
-#set java environment
-export JAVA_HOME=/usr/java/jdk1.8.0_121
-export JRE_HOME=/usr/java/jdk1.8.0_121/jre
-export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
-export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+- 环境变量 `/etc/profile`  
+  实际搭建环境过程中的环境变量值（和文档上面的描述有一点点偏差），文档上面的描述是我认为更加合理的模式    
+  ~~~sh
+  #set java environment
+  export JAVA_HOME=/usr/java/jdk1.8.0_121
+  export JRE_HOME=/usr/java/jdk1.8.0_121/jre
+  export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+  export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
-# set android sdk
-export ANDROID_HOME=/usr/local/android-sdk-linux
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+  # set android sdk
+  export ANDROID_HOME=/usr/local/android-sdk-linux
+  export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-## set gradle
-export GRADLE_HOME=/usr/local/gradle/gradle-3.3
-export PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin:${GRADLE_HOME}/bin:${JAVA_HOME}:${PATH}
+  ## set gradle
+  export GRADLE_HOME=/usr/local/gradle/gradle-3.3
+  export PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin:${GRADLE_HOME}/bin:${JAVA_HOME}:${PATH}
 
-# set jenkins
-export JENKINS_HOME=/usr/local/apache-tomcat-7.0.78/webapps/jenkins
+  # set jenkins
+  export JENKINS_HOME=/usr/local/apache-tomcat-7.0.78/webapps/jenkins
 
-# set tomcat
-export TOMCAT_HOME=/usr/local/apache-tomcat-7.0.78
+  # set tomcat
+  export TOMCAT_HOME=/usr/local/apache-tomcat-7.0.78
 
-# set curl
-export PATH=$PATH:/usr/local/curl/bin
-~~~
+  # set curl
+  export PATH=$PATH:/usr/local/curl/bin
+  ~~~
+  
+- 蒲公英上传 `jenkins-build.sh`  
+  ~~~sh
+  #!/bin/sh
+
+  echo "===========发布到蒲公英==========="
+  #蒲公英上的User Key
+  uKey="a04fb657256887f1f7a28f09bad93856"
+  #蒲公英上的API Key
+  apiKey="f8b02896cfce9e52814172a6d8f267e7"
+  #${WORKSPACE}Jenkins下载的项目地址 
+  curl -F "file=@${WORKSPACE}/platform/build/outputs/apk/aorise-petition-release.apk" \
+    -F "uKey=${uKey}" -F "_api_key=${apiKey}" http://www.pgyer.com/apiv1/app/upload
+  echo "\n\n"
+  ~~~
+  
+  
+## Q&A
+
+- 如何在centos系统下载各种软件？  
+  > - 利用wget 命令  
+  > ![wget命令](/assets/img/android-centos-jenkins/download-jdk.png)  
+  > - 利用xshell 的 rz sz 命令(不建议)  
+
+- Jenkins邮箱配置后邮件发送失败？  
+  > - 邮箱的配置一直用同一个账号  
+  > - 邮箱开通smtp协议   
+  > - 用LTS版本的Jenkins
