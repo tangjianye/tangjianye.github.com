@@ -42,11 +42,11 @@ Sonar 是一个用于代码质量管理的开放平台。通过插件机制，So
   > [root@centos-7 local]# unzip sonarqube-5.6.6.zip    
   > [root@centos-7 local]# vi /usr/local/sonarqube-5.6.6/conf/sonar.properties   
 
-  ~~增加字段（不太确定是否需要增加因为和SonarRunner里面的配置重复了）：~~     
+  ~~增加字段（不太确定是否需要增加因为和SonarRunner里面的配置重复了，我没有配置）：~~     
   ```
   sonar.sorceEncoding=UTF-8
   sonar.login=admin
-  sonar.password=aorise123456
+  sonar.password=admin
   sonar.scm.disable=true
   ```
   
@@ -55,7 +55,7 @@ Sonar 是一个用于代码质量管理的开放平台。通过插件机制，So
   > [root@centos-7 local]# unzip sonar-runner-dist-2.4.zip
   > [root@centos-7 local]# vi /usr/local/sonar-runner-2.4/conf/sonar-runner.properties   
 
-  修改注释的字段     
+  修改注释的字段(**密码的修改没用，账号密码都是admin才可以登录**)     
   ![SonarQube](/assets/img/tools-sanor/04.png)
   
 - 设置环境变量    
@@ -75,7 +75,8 @@ Sonar 是一个用于代码质量管理的开放平台。通过插件机制，So
 - 启动SonarQube  
   > [root@centos-7 local]# ./sonar.sh start   启动服务      
   > [root@centos-7 local]# ./sonar.sh stop    停止服务         
-  > [root@centos-7 local]# ./sonar.sh restart 重启服务     
+  > [root@centos-7 local]# ./sonar.sh restart 重启服务  
+  > [root@centos-7 local]# ./sonar.sh { console | start | stop | restart | status | dump }   
 
 
 - 防火墙开放9000端口  
@@ -86,9 +87,12 @@ Sonar 是一个用于代码质量管理的开放平台。通过插件机制，So
 
 下载[汉化包](http://repo1.maven.org/maven2/org/codehaus/sonar-plugins/l10n/sonar-l10n-zh-plugin/1.8/sonar-l10n-zh-plugin-1.8.jar)到/{SONAR_HOME}/extensions/plugins/文件夹，重启SonarQube即可。  
 
-- Windows: NA(没有试过，不行重启电脑，再次启动SonarQube)   
+- Windows: 把StartSonar.bat关掉再打开即可重启sonar服务   
 - Centos: 进入/{SONAR_HOME}/bin/{系统类型目录}，再执行 `./sonar.sh restart`
 
+当然汉化包也可以进入SonarQube页面的软件中心下载配置。
+
+### 配置  
 
 然后在浏览器中访问: http://localhost:9000/ 即可显示SonarQube页面  
 ![SonarQube](/assets/img/tools-sanor/02.png)
@@ -115,4 +119,4 @@ sonar.profile=Android Lint
 ![sonar-runner成功](/assets/img/tools-sanor/03.png)  
 3. 浏览器访问: http://localhost:9000 点击项目，就可以查看具体问题了。  
 
-本篇文章简单介绍了自己在本机搭建SonarQube环境时的步骤，不是完整的安装文档。搭建SonarQube环境时主要参考了两篇文章[《SonarQube的Android环境配置》](http://www.jianshu.com/p/826c80805bb2?nomobile=yes)和[《Android 代码检查工具SonarQube》](http://blog.csdn.net/z69183787/article/details/51502870)，不过遗憾的是如果只是按照两篇文章单独介绍的部分搭建环境都有问题，只有把两个文章里面介绍的内容进行整合才成功。
+本篇文章简单介绍了自己在本机搭建SonarQube环境时的步骤，关于配置方面的描述并不完整。
