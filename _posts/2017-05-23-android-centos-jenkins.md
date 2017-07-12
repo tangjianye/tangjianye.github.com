@@ -145,8 +145,12 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 - 登录Tomcat  
 
-  打开浏览器查看http://localhost:8080 是否出现Tomcat 页面即可验证是否配置成功。如果失败一般是防火墙的问题。  
-  > 防火墙开放默认的8080端口  
+  打开浏览器查看http://localhost:8080 是否出现Tomcat 页面即可验证是否配置成功。如果失败一般是防火墙的问题。 
+  > 1）关闭firewall：  
+  > [root@centos-7 bin]# systemctl stop firewalld.service #停止firewall  
+  > [root@centos-7 bin]# systemctl disable firewalld.service #禁止firewall开机启动  
+  > [root@centos-7 bin]# firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）    
+  > 2）防火墙开放默认的8080端口    
   > [root@centos-7 bin]# firewall-cmd --permanent --zone=public --add-port=8080/tcp   
   > [root@centos-7 bin]# firewall-cmd --reload   
 
