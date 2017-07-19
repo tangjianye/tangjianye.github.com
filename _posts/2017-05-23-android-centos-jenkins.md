@@ -16,28 +16,28 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 - 检查是否安装了openJava,如果安装了需要卸载  
 
-- 在/usr/目录下创建java目录  
-  > [root@centos-7 ~]# mkdir /usr/java   
-  > [root@centos-7 ~]# cd /usr/java    
+- 打开/usr/目录   
+  > [root@centos-7 ~]# cd /usr    
 
 - 下载jdk,然后解压  
-  > [root@centos-7 java]# wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz"    
-  > [root@centos-7 java]# tar -zxvf jdk-8u131-linux-x64.tar.gz       
+  > [root@centos-7 usr]# wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz"    
+  > [root@centos-7 usr]# tar -zxvf jdk-8u131-linux-x64.tar.gz       
+  > [root@centos-7 usr]# mv jdk1.8.0_131 java    
 
 - 设置环境变量  
-  > [root@centos-7 java]# vi /etc/profile   
+  > [root@centos-7 usr]# vi /etc/profile   
 
   在profile文件尾添加如下内容：  
   ~~~sh
-  #set java environment
-  export JAVA_HOME=/usr/java/jdk1.8.0_121
-  export JRE_HOME=/usr/java/jdk1.8.0_121/jre
+  # set java environment
+  export JAVA_HOME=/usr/java
+  export JRE_HOME=/usr/java/jre
   export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
   export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
   ~~~
 
   刷新环境变量  
-  > [root@centos-7 java]# vi /etc/profile  
+  > [root@centos-7 java]# source /etc/profile  
 
 - 查看JDK安装是否成功    
   > [root@centos-7 java]# java -version   
@@ -70,7 +70,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   ~~~
 
   刷新环境变量
-  > [root@centos-7 android-sdk-linux]# vi /etc/profile    
+  > [root@centos-7 android-sdk-linux]# source /etc/profile    
 
 - 查看SDK安装是否成功  
   > [root@centos-7 android-sdk-linux]# adb   
@@ -92,13 +92,13 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
   在profile文件尾添加如下内容：  
   ~~~sh
-  ## set gradle
+  # set gradle
   export GRADLE_HOME=/usr/local/gradle/gradle-3.3
   export PATH=$PATH:$GRADLE_HOME/bin
   ~~~
 
   刷新环境变量  
-  > [root@centos-7 gradle]# vi /etc/profile    
+  > [root@centos-7 gradle]# source /etc/profile    
 
 - 查看Gradle安装是否成功    
   > [root@centos-7 gradle]# gradle -v     
@@ -111,38 +111,47 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 ## Tomcat7环境  
 
-采用手动解压[Tomcat](http://tomcat.apache.org/download-70.cgi)的压缩包，然后设置环境变量的方法。  
+采用手动解压[Tomcat](http://tomcat.apache.org/)的压缩包，然后设置环境变量的方法。  
 
 - 在/usr/local目录下创建tomcat目录    
-  > [root@centos-7 ~]# mkdir /usr/local/tomcat   
-  > [root@centos-7 ~]# cd /usr/local/tomcat   
+  > [root@centos-7 ~]# mkdir /usr/local   
+  > [root@centos-7 ~]# cd /usr/local   
 
 - 下载tools解压，然后下载对应的SDK版本   
-  > [root@centos-7 tomcat]# wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.78.tar.gz   
-  > [root@centos-7 tomcat]# tar -zxvf  apache-tomcat-9.0.0.M17.tar.gz    
+  > [root@centos-7 local]# wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.79.tar.gz    
+  > [root@centos-7 local]# tar -zxvf  apache-tomcat-7.0.79.tar.gz      
+  > [root@centos-7 local]# mv apache-tomcat-7.0.79 tomcat      
+
 
 - 设置环境变量    
   > [root@centos-7 tomcat]# vi /etc/profile   
 
   在profile文件尾添加如下内容：  
   ~~~sh
-  ## set tomcat
-  export TOMCAT_HOME=/usr/local/tomcat/apache-tomcat-7.0.78
+  # set tomcat
+  export TOMCAT_HOME=/usr/local/tomcat
   ~~~
 
   刷新环境变量
-  > [root@centos-7 tomcat]# vi /etc/profile    
+  > [root@centos-7 tomcat]# source /etc/profile    
 
 - 启动Tomcat  
   > [root@centos-7 tomcat]# cd /usr/local/tomcat/apache-tomcat-7.0.78/bin   
-  > [root@centos-7 bin]# ./startup.sh  
-  > Using CATALINA_BASE:   /usr/local/tomcat/apache-tomcat-7.0.78  
-  > Using CATALINA_HOME:   /usr/local/tomcat/apache-tomcat-7.0.78  
-  > Using CATALINA_TMPDIR: /usr/local/tomcat/apache-tomcat-7.0.78/temp  
-  > Using JRE_HOME:        /usr/java/jdk1.8.0_121  
-  > Using CLASSPATH:       /usr/local/tomcat/apache-tomcat-7.0.78/bin/bootstrap.jar:/opt/apache-tomcat-8.0.23/bin/tomcat-juli.jar  
-  > Tomcat started.  
+  > /usr/local/tomcat exists, start tomcat server!    
+  > Using CATALINA_BASE:   /usr/local/tomcat     
+  > Using CATALINA_HOME:   /usr/local/tomcat     
+  > Using CATALINA_TMPDIR: /usr/local/tomcat/temp     
+  > Using JRE_HOME:        /usr/java/jre     
+  > Using CLASSPATH:       /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar     
+  > Tomcat started.      
+  > Open firewall 8080 port.     
 
+
+- 设置UTF-8编码
+  修改tomcat下的conf/server.xml文件
+  ```xml
+  <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8" />
+  ```
 - 登录Tomcat  
 
   打开浏览器查看http://localhost:8080 是否出现Tomcat 页面即可验证是否配置成功。如果失败一般是防火墙的问题。 
@@ -175,7 +184,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   ~~~
 
   刷新环境变量
-  > [root@centos-7 gradle]# vi /etc/profile    
+  > [root@centos-7 gradle]# source /etc/profile    
 
 - 运行Jenkins    
   启动tomcat就可以直接运行jenkins  
@@ -217,7 +226,7 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   ~~~
 
   刷新环境变量  
-  > [root@centos-7 gradle]# vi /etc/profile    
+  > [root@centos-7 gradle]# source /etc/profile    
 
 - 查看curl安装是否成功    
 > [root@centos-7 gradle]# curl --help      
@@ -260,8 +269,8 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   实际搭建环境过程中的环境变量值（和文档上面的描述有一点点偏差），文档上面的描述是我认为更加合理的模式    
   ~~~sh
   #set java environment
-  export JAVA_HOME=/usr/java/jdk1.8.0_121
-  export JRE_HOME=/usr/java/jdk1.8.0_121/jre
+  export JAVA_HOME=/usr/java
+  export JRE_HOME=/usr/java/jre
   export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
   export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
