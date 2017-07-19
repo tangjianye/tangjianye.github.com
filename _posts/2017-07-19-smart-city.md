@@ -22,7 +22,7 @@ description: 智慧城市APP平台总体架构和设计方案
 系统总架构主要是包括一个commonLib底层公共库，一个plugin插件化集成模块，一个platform平台配置模块。     
 - commonLib公共库包括两个方面：
     - 工具库：提供底层联网请求、图片处理、数据库操作和LOG打印工具类等。
-    - 组件库：登陆注册组件、APP升级组件等各种APP通用的功能模块；
+    - 组件库：登陆注册组件、APP升级组件等各种APP通用的功能模块。
 - plugin插件整合智慧城市APP需要的各个子项目，包括精准扶贫、教育、医疗等各基层服务。
 - platform平台提供配置，配置智慧城市APP的在手机上显示的图标文字等个性化的信息。
      
@@ -100,12 +100,13 @@ description: 智慧城市APP平台总体架构和设计方案
 平台模块配置的内容：   
 - 手机桌面的启动icon名字、icon图标信息；
 - 各个子项目的闪屏页图片、单独发布子项目时的登陆和注册页逻辑；
-- 各个项目的UI或者功能的个性化配置。
+- 各个项目的UI或者功能的个性化配置。   
 
 
-## 工程样例
-- [Sample](https://aorise-org.github.io/android-sample/)：智慧城市APP平台架构的Demo样例。
-- [Document](https://aorise-org.github.io/maven-snapshots/android-common/)：公共库的javadoc文档
+# 工程样例
+
+- [Sample](https://aorise-org.github.io/android-sample/): 智慧城市APP平台架构的Demo样例。
+- [Document](https://aorise-org.github.io/maven-snapshots/android-common/): 公共库的javadoc文档。
 
 
 
