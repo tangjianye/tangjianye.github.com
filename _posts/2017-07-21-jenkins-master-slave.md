@@ -1,7 +1,7 @@
 ---
 layout: post  
 title:  Jenkins节点配置  
-date:   2017-05-02 
+date:   2017-07-21 
 tags: [Tools]  
 categories: Tools  
 author: JayaTang  
