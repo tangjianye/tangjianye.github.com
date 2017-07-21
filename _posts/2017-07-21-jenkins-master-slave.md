@@ -7,7 +7,7 @@ categories: Tools
 author: JayaTang  
 description: Jenkins主从节点配置 
 ---
-文档主要介绍Jenkins主从节点配置，文档的前提条件是有两台centos7虚拟机，一台配置master主机，一台配置slave主机。具体的Jenkins配置请参考另外一篇文章[<Centos搭建Android CI环境>](https://tangjianye.github.io/android/2017/05/23/android-centos-jenkins)。现在以主机已经搭建最小化的Jenkins环境，从机已经搭建android编译环境为例，介绍Jenkins节点配置。 
+文档主要介绍Jenkins主从节点配置，文档的前提条件是有两台centos7虚拟机，一台配置master主机，一台配置slave主机。具体的Jenkins配置请参考另外一篇文章[《Centos搭建Android CI环境》](https://tangjianye.github.io/android/2017/05/23/android-centos-jenkins)。现在以主机已经搭建最小化的Jenkins环境，从机已经搭建android编译环境为例，介绍Jenkins节点配置。 
 
 ## 环境介绍
 - 主机环境介绍：主机Jenkins运行在tomcat中。Jenkins本身安装的环境仅包括java环境和gradle环境。
@@ -60,14 +60,14 @@ description: Jenkins主从节点配置
 - 测试登录：主机通过命令行 `ssh  root@远程主机IP` 测试是否可以成功登陆远程主机。
 
 ## 从机配置
-从机理论上如果之前安装jenkins配置好了，其实已经不需要配置了。只是 `Global Tool Configuration` 如果作为从机，就一定要配置才可以编译通过。 
+从机理论上如果之前安装jenkins配置好了，其实已经不需要配置了。只是如果作为从机，`Global Tool Configuration` 就一定要配置才可以编译通过。 
 ![环境变量配置](/assets/img/jenkins-master-slave/slave.png)  
 
 
 ## 主机配置
 
 ### 环境变量配置
-和从机配置一样。   
+`Global Tool Configuration` 和从机配置一样。   
 
 ### 节点配置    
 在系统管理 / 节点管理 创建新节点。      
@@ -90,5 +90,6 @@ description: Jenkins主从节点配置
 
 - 从机sh脚本可以独立编译通过，通过主机编译就不可以？
 > 这个问题我有一个不太科学的解决方案，就是sh脚本里面的命令用slave机里面的绝对路径来实现。
->    >   例如：gradle sonarqube;  // 不行     
->    >        /usr/local/gradle/gradle-3.3/bin/gradle sonarqube;   // 可以
+>    >   例如：   
+>    >   gradle sonarqube;  // 不行     
+>    >   /usr/local/gradle/gradle-3.3/bin/gradle sonarqube;   // 可以
