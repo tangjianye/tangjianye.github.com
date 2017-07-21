@@ -2,8 +2,8 @@
 layout: post  
 title:  智慧城市APP平台架构  
 date:   2017-07-19 
-tags: [Tools]  
-categories: Tools  
+tags: [Document]  
+categories: Document  
 author: JayaTang  
 description: 智慧城市APP平台总体架构和设计方案 
 ---

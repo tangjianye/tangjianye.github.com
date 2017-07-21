@@ -42,7 +42,7 @@ Sonar 是一个用于代码质量管理的开放平台。通过插件机制，So
   > [root@centos-7 local]# unzip sonarqube-5.6.6.zip    
   > [root@centos-7 local]# vi /usr/local/sonarqube-5.6.6/conf/sonar.properties   
 
-  ~~增加字段（不太确定是否需要增加因为和SonarRunner里面的配置重复了，我没有配置）：~~     
+  `sonar.properties`增加字段（不太确定是否需要增加因为和SonarRunner里面的配置重复了）：       
   ```
   sonar.sorceEncoding=UTF-8
   sonar.login=admin
@@ -51,9 +51,9 @@ Sonar 是一个用于代码质量管理的开放平台。通过插件机制，So
   ```
   
 - 在/usr/local目录中下载SonarRunner      
-  > [root@centos-7 local]# wget http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.4/sonar-runner-dist-2.4.zip   
-  > [root@centos-7 local]# unzip sonar-runner-dist-2.4.zip
-  > [root@centos-7 local]# vi /usr/local/sonar-runner-2.4/conf/sonar-runner.properties   
+  > [root@centos-7 local]# wget http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.4/sonar-runner-dist-2.4.zip      
+  > [root@centos-7 local]# unzip sonar-runner-dist-2.4.zip     
+  > [root@centos-7 local]# vi /usr/local/sonar-runner-2.4/conf/sonar-runner.properties       
 
   修改注释的字段(**密码的修改没用，账号密码都是admin才可以登录**)     
   ![SonarQube](/assets/img/tools-sanor/04.png)
@@ -97,7 +97,7 @@ Sonar 是一个用于代码质量管理的开放平台。通过插件机制，So
 然后在浏览器中访问: http://localhost:9000/ 即可显示SonarQube页面  
 ![SonarQube](/assets/img/tools-sanor/02.png)
 
-1. 命令行，输入sonar-runner -version，看到sonar的版本信息就说明配置成功了。
+1. 命令行，输入sonar-runner --version，看到sonar的版本信息就说明配置成功了。
 2. 打开本地SonarQube页面[Quality Profiles -> Java, 2 profile(s) -> Android Lint], 配置Android Lint.
 3. 打开本地SonarQube页面[Administration -> Projects -> Management], 创建项目。项目的projetKey和projectName可以相同。
 

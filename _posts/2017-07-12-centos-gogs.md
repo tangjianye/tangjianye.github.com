@@ -55,7 +55,9 @@ Gogs需要部署在虚拟机git用户账号名下，否则会覆盖root用户下
   mode of "/etc/sudoers" changed from 0640 (rw-r-----) to 0440 (r--r-----)   
   ```
   6. 这时候使用新用户登录，就可以使用sudo命令。
-
+  ```sh
+  [root@localhost ~]# su git     
+  ```
 
 ## 安装Gogs  
 本文介绍[二进制安装Gogs](https://gogs.io/docs/installation/install_from_binary.html)的方案。
