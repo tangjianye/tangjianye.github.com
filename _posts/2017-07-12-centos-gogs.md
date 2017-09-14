@@ -75,6 +75,13 @@ Gogs需要部署在虚拟机git用户账号名下，否则会覆盖root用户下
 - 使用命令 cd 进入到刚刚解压的目录。
 - 执行命令 `./gogs web`
 
+## 后台运行与重启Gogs  
+通过命令 `./gogs web`运行gogs是不可以关闭xshell界面的，如果需要后台运行需要如下配置      
+```sh
+[root@centos-7 ~]# su git
+[root@centos-7 ~]# nohup ./gogs web &
+```
+
 ## 配置Gogs
 启动浏览器地址`ip:3000`就可以访问Gogs，第一次默认会进入`ip:3000/install`配置页面。具体的[配置](https://gogs.io/docs/advanced/configuration_cheat_sheet)官方网站介绍很详细。  
 基本上都是默认配置就好了，此外需要注意的地方如下：
