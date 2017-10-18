@@ -262,7 +262,38 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
 
 ![Job配置](/assets/img/android-centos-jenkins/job-config-06.png)  
 
+- 邮件内容配置
 
+Default Subject:  
+```js  
+Jenkins构建通知: $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!  
+```
+ 
+Default Content:  
+```html  
+<hr/>
+
+(本邮件是程序自动下发的，请勿回复！)<br/><hr/>
+
+项目名称：$PROJECT_NAME<br/><hr/>
+
+项目描述：$JOB_DESCRIPTION<br/><hr/>
+
+下载地址：<a href="http://10.16.3.12:8080/tools/app/$PROJECT_NAME">Download</a><br/><hr/>
+
+构建编号：$BUILD_NUMBER<br/><hr/>
+
+构建状态：$BUILD_STATUS<br/><hr/>
+
+触发原因：${CAUSE}<br/><hr/>
+
+构建日志地址：<a href="${BUILD_URL}console">${BUILD_URL}console</a><br/><hr/>
+
+构建地址：<a href="$BUILD_URL">$BUILD_URL</a><br/><hr/>
+
+变更集:${JELLY_SCRIPT,template="html"}<br/><hr/>
+```
+  
 ## 附录
 
 - 环境变量 `/etc/profile`  
@@ -283,10 +314,10 @@ description: 本文档描述Centos 7利用Jenkins 搭建Android CI环境
   export PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin:${GRADLE_HOME}/bin:${JAVA_HOME}:${PATH}
 
   # set jenkins
-  export JENKINS_HOME=/usr/local/apache-tomcat-7.0.78/webapps/jenkins
+  export JENKINS_HOME=/usr/local/tomcat/webapps/jenkins
 
   # set tomcat
-  export TOMCAT_HOME=/usr/local/apache-tomcat-7.0.78
+  export TOMCAT_HOME=/usr/local/tomcat
 
   # set curl
   export PATH=$PATH:/usr/local/curl/bin  
