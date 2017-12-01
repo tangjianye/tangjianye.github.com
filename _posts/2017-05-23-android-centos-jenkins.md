@@ -279,7 +279,7 @@ Default Content:
 
 项目描述：$JOB_DESCRIPTION<br/><hr/>
 
-下载地址：<a href="http://10.16.3.12:8080/tools/app/$PROJECT_NAME">Download</a><br/><hr/>
+WAP地址：<a href="http://10.16.3.12:8080/$PROJECT_NAME">http://10.16.3.12:8080/$PROJECT_NAME</a><br/><hr/>
 
 构建编号：$BUILD_NUMBER<br/><hr/>
 
