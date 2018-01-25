@@ -53,6 +53,8 @@ description: 利用Github托管功能创建代码maven仓库
       repositories.mavenDeployer {
           def deployPath = file(getProperty('aar.deployPathCommon'))
           repository(url: "file://${deployPath.absolutePath}")
+          // def deployPath = file('E://maven-local/')    // 绝对路径可以
+          // def deployPath = file('../maven-snapshots')  // 相对路径可以
           pom.project {
               groupId project.PUBLISH_GROUP_ID
               artifactId project.PUBLISH_ARTIFACT_ID
@@ -82,7 +84,9 @@ allprojects {
     repositories {
         ...
         // aorise commonLib 远程仓库地址
-        maven { url "https://raw.githubusercontent.com/tangjianye/AoriseMaven/master" }
+        // maven { url "http://10.16.3.12:8080/tools/maven-snapshots/" }
+        maven { url "https://raw.githubusercontent.com/aorise-org/maven-snapshots/master" }
+        // maven { url "file://E://maven-local/" }
     }
 }
 ```
